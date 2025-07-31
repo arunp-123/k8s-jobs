@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+ name: demo-job
+ namespace: my-app
+spec:
+ completions: 1
+ parallelism: 1
+ template:
+   spec:
+     containers:
+     - name: job-container
+       image: busybox:latest
+       command: ["sh",  "-c", "echo Hello World"]
+     restartPolicy: Never
