@@ -21,7 +21,8 @@ BusyBox:
 
 
  Create the Job
-$ kubectl apply -f job.yml
+ 
+$kubectl apply -f job.yml
 
 Check Job status
 $ kubectl get jobs -n my-app
