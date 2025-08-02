@@ -22,16 +22,20 @@ BusyBox:
 
  Create the Job
  
-$kubectl apply -f job.yml
+$ kubectl apply -f job.yml
 
 Check Job status
+
 $ kubectl get jobs -n my-app
 
 View Pods created by the Job
+
 $ kubectl get pods -n my-app
 
 Check logs of the Pod (output of echo Hello World)
+
 $ kubectl logs <pod-name> -n my-app
 
 Delete the Job
+
 $ kubectl delete job demo-job -n my-app
